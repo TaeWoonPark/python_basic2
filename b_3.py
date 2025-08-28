@@ -18,5 +18,5 @@ for j in range(1, rows + 1):  # 縦
         elif result < 100:
             print(f"{i} x {j} = {result} |", end=" ")
         else:
-            print(f"{i} x {j} = {result} |", end=" ")  # 3桁はそのまま
+            print(f"{i:<2} x {j:>2} = {result:>2} |", end=" ")  # 3桁はそのまま
     print()
