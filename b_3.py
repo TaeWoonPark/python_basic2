@@ -1,22 +1,8 @@
-# beautiful kuku_py
+rows = int(input("行数を入力してください: "))
+cols = int(input("列数を入力してください: "))
 
-# 行数と列数を入力してもらう
-
-rows = int(input("行数を入力してもらう:"))
-cols = int(input("列数を入力してください:"))
-
-# 掛け算の表を表示する
-
-for j in range(1, rows + 1):  # 縦
-    for i in range(1, cols + 1):  # 横
-
-        result = i * j
-        # 結果が2桁以下ならスペースを追加して揃える
-
-        if result < 10:
-            print(f"{i} x {j} = {result} |", end=" ")
-        elif result < 100:
-            print(f"{i} x {j} = {result} |", end=" ")
-        else:
-            print(f"{i:<2} x {j:>2} = {result:>2} |", end=" ")  # 3桁はそのまま
+for j in range(1, rows + 1):
+    for i in range(1, cols + 1):
+        # 式全体を18文字に固定（100以上にも対応）
+        print(f"{i:>2} x {j:<2} = {i*j:>3}", end="|")
     print()
